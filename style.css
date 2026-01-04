@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    height: 1e2vh;
+    background: url(https://i.pinimg.com/736x/e3/93/9f/e3939f748ca66785e7c01e0733bc1db9.jpg) no-repeat center / cover;
+    position: relative;
+    transition: .3s;
+}
+
+.slider .btn {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 4rem;
+    border: 0;
+    border-radius: 50%;
+    background: red;
+    padding: 0 30px 8px 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px gold, 0 0 15px goldenrod, 0 0 20px yellow;
+    transition: .3s;
+    animation: btn 1s 5;
+}
+
+
+.slider .btn.prev {
+    left: 1.5%;
+    --pos: 20px;
+    color: yellow;
+}
+
+.slider .btn.next {
+    right: 1.5%;
+    --pos: -20px;
+    color: yellow;
+}
+
+.slider .btn:hover {
+    box-shadow: 0 0 10px red, 0 0 15px rgba(255, 0, 0, 0.728), 0 0 20px palevioletred;
+    background: yellow;
+    color: red;
+}
+
+@keyframes btn {
+    50% {translate: var(--pos) -50%;}
+}
+
+.slider .radio {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+    left: 0;
+}
+
+.slider .radio input {
+    width: 30px;
+    height: 30px;
+    accent-color: brown;
+    margin: 4px;
+    cursor: pointer;
+}
